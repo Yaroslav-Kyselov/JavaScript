@@ -41,4 +41,6 @@ console.log(msg)
 let q = 100;
 let w = '100';
 let s = true;
-typeof a
+console.log(typeof q, q);
+console.log(typeof w, w);
+console.log(typeof s, s);
