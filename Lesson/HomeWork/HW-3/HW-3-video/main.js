@@ -86,7 +86,11 @@
 // за допомоги циклу вивести:
 
 //- користувачів зі статусом true
-
+// for (const user of users) {
+//     if (user.status) {
+//         console.log(user);
+//     }
+// }
 // - користувачів зі статусом false
 
 // - користувачів які старші за 30 років
@@ -103,3 +107,8 @@ let users = [
     {name: 'olya', age: 31, status: false},
     {name: 'max', age: 31, status: true}
 ];
+for (let user of users) {
+    if (user.age > 30) {
+        console.log(`${user.name}`)
+    }
+}
