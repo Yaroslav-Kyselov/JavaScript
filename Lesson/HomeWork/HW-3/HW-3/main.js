@@ -283,7 +283,7 @@ for (const user of usersList) {
                 <p>Street – ${user.address.street}</p>
                 <p>Suite – ${user.address.suite}</p>
                 <p>Zip code – ${user.address.zipcode}</p>
-               </div>
-            </div>`
+            </div>
+        </div>`
     )
 }
