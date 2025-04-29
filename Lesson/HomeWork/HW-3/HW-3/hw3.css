@@ -1,0 +1,7 @@
+.users-box{
+    display: grid;
+    width: 100%;
+    grid-template-columns: 0.5fr 1.5fr;
+    gap: 50px;
+    border-bottom: 2px solid black;
+ }
