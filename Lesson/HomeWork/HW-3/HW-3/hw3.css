@@ -1,7 +1,11 @@
-.users-box{
+* {
+    margin: 0;
+}
+.wrapper{
     display: grid;
-    width: 100%;
-    grid-template-columns: 0.5fr 1.5fr;
-    gap: 50px;
-    border-bottom: 2px solid black;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(5, 1fr) ;
+    gap: 20px;
+.users-box{
+    border: 2px solid black;}
  }
