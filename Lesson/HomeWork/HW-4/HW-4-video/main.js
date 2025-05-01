@@ -24,4 +24,9 @@
 //  }
 //  foobar([3,4,5,6,7,8,9,2,1,3,5])
 
-
+// // створити функцію яка створює параграф з текстом та виводить його через document.write Текст задати через аргумент
+//
+// function writeText(strg) {
+//        document.write(`<p>${strg}</p>`);
+// }
+// writeText('sfdshgjkfhkfygjfg');
