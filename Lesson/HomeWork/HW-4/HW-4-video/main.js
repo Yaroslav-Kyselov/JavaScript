@@ -30,3 +30,17 @@
 //        document.write(`<p>${strg}</p>`);
 // }
 // writeText('sfdshgjkfhkfygjfg');
+
+// створити функцію яка створює  ul  з елементами li. текст задати через аргумент всім однаковий. кількість li
+// задати другим аргуметом який є числовим (тут використовується цикл) та виводить його через document.write
+
+
+function items(text, counter) {
+    document.write('<ul>')
+
+         for (let i = 0; i < counter; i++ ) {
+             document.write(`<ul>${text}</ul>`)
+         }
+    document.write('</ul>')
+    }
+items('hdgkfyluilku',34)
