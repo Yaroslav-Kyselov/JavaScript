@@ -33,14 +33,45 @@
 
 // створити функцію яка створює  ul  з елементами li. текст задати через аргумент всім однаковий. кількість li
 // задати другим аргуметом який є числовим (тут використовується цикл) та виводить його через document.write
+//
+// function items(text, counter) {
+//     document.write('<ul>')
+//
+//          for (let i = 0; i < counter; i++ ) {
+//              document.write(`<ul>${text}</ul>`)
+//          }
+//     document.write('</ul>')
+//     }
+// items('hdgkfyluilku',34)
+
+// створити функцію яка приймає масив примітивних елементів (числа, стрінги. булі) та будує для них список  (ul li)
+// та виводь його через document.write
+
+// function foobar(array) {
+//      document.write('<ul>')
+//         for (const item of array) {
+//             document.write(`<li>${item}</li>`) ;
+//         }
+//     document.write('</ul>')
+//  }
+//  foobar(['sfsf',4,5,6,'hhfjgh',8,9,true,1,3,5])
+
+// створити функцію яка приймає масив обєктів з наступними полями (id, name, age) та виводить його в документ
+// для кожного обєкту окремий блок
+
+// function foobar(array) {
+//              for (const user of array) {
+//             document.write(`<div>${user.id} ${user.name} ${user.username}</div>`) ;
+//         }
+//    }
+//    foobar([{id: 1, name: 'Leanne Graham', username: 'Bret'},
+//         {id: 2, name: 'Leanne ', username: 'Bret'},
+//         {id: 3, name: 'Graham', username: 'Bret'},
+//    ])
+
+// створити функцію яка повертає найменьше число з масиву
+
+function min(array) {
 
 
-function items(text, counter) {
-    document.write('<ul>')
-
-         for (let i = 0; i < counter; i++ ) {
-             document.write(`<ul>${text}</ul>`)
-         }
-    document.write('</ul>')
-    }
-items('hdgkfyluilku',34)
+}
