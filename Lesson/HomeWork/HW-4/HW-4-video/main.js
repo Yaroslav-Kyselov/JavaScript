@@ -71,7 +71,24 @@
 
 // створити функцію яка повертає найменьше число з масиву
 
-function min(array) {
+// function minN(numbers) {
+//     let min = numbers[0];
+//          for (const number of numbers) {
+//             if (number < min) {
+//                 min = number
+//             }
+//         }
+//     return min;
+// }
+// console.log(minN([3,4,5,6,7,8,9,2,1,3,-16]))
 
-
-}
+// створити функцію яка приймає масив чисел, сумує значення елементів масиву та повертає його
+// function sum(arr) {
+//     let SuM = 0;
+//     for (let i = 0; i < arr.length; i++) {
+//         SuM += arr[i];
+//     }
+//     return SuM;
+// }
+// // sum([1, 2, 3, 4, 5]);
+//     console.log(sum([1, 2, 3, 4, 5]))
