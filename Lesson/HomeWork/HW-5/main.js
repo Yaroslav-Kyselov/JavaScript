@@ -8,23 +8,22 @@
 // console.log(circle(10))
 
 // створити функцію яка обчислює та повертає площу циліндра з висотою h та  радіусом r
-let cylinder=(h, r)=>h*Math.PI*r*r
-console.log(cylinder(10,10))
+// let cylinder=(h, r)=>h*Math.PI*r*r
+// console.log(cylinder(10,10))
 
-// // створити функцію яка приймає масив та виводить кожен елемент
-// function foobar(array) {
+// створити функцію яка приймає масив та виводить кожен елемент
+// let foobar=(array) => {
 //     for (const item of array) {
 //         console.log(item);
 //     }
 //  }
-//  foobar([3,4,5,6,7,8,9,2,1,3,5])
+//  foobar([2,4,5,6,7,8,9,2,1,3,5])
 
-// // створити функцію яка створює параграф з текстом та виводить його через document.write Текст задати через аргумент
-//
-// function writeText(strg) {
+// створити функцію яка створює параграф з текстом та виводить його через document.write Текст задати через аргумент
+// let writeText=(strg)=> {
 //        document.write(`<p>${strg}</p>`);
 // }
-// writeText('sfdshgjkfhkfygjfg');
+// writeText('1sfdshgjkfhkfygjfg');
 
 // створити функцію яка створює  ul  з елементами li. текст задати через аргумент всім однаковий. кількість li
 // задати другим аргуметом який є числовим (тут використовується цикл) та виводить його через document.write
