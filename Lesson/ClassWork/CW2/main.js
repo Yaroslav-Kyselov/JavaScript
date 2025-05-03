@@ -1,5 +1,5 @@
 
-// -----------------------------------------lesson 2.5
+// // -----------------------------------------lesson 2.5
 // let users=[
 //     {skills: ['html', 'mysql', 'mongo'], id: 1, name: 'vasya', age: 31, status: true},
 //     {skills: ['html', 'js'], id: 2, name: 'petya', age: 33, status: false},
