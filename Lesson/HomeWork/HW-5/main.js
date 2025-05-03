@@ -3,9 +3,13 @@
 // let square=(aNum, bNum) => aNum + bNum
 // console.log(square(5,5))
 
-// // створити функцію яка обчислює та повертає площу кола з радіусом r
+// створити функцію яка обчислює та повертає площу кола з радіусом r
 // let circle=(radius)=>Math.PI*radius*radius
 // console.log(circle(10))
+
+// створити функцію яка обчислює та повертає площу циліндра з висотою h та  радіусом r
+let cylinder=(h, r)=>h*Math.PI*r*r
+console.log(cylinder(10,10))
 
 // // створити функцію яка приймає масив та виводить кожен елемент
 // function foobar(array) {
