@@ -26,15 +26,15 @@
 // writeText('1sfdshgjkfhkfygjfg');
 
 // створити функцію, яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий
-let items=(text) =>{
-    document.write('<ul>')
-              document.write(`<li>${text}</li>`)
-              document.write(`<li>${text}</li>`)
-              document.write(`<li>${text}</li>`)
-
-    document.write('</ul>')
-    }
-items('hdgkfyluilku')
+// let items=(text) =>{
+//     document.write('<ul>')
+//               document.write(`<li>${text}</li>`)
+//               document.write(`<li>${text}</li>`)
+//               document.write(`<li>${text}</li>`)
+//
+//     document.write('</ul>')
+//     }
+// items('hdgkfyluilku')
 
 // створити функцію, яка створює ul з трьома елементами li. Текст li задати через аргумент всім однаковий.
 // Кількість li визначається другим аргументом, який є числовим (тут використовувати цикл)
