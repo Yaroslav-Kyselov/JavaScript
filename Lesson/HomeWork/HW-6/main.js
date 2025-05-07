@@ -48,3 +48,19 @@
 // console.log(stringToarray('Ревуть воли як ясла повні'));
 
 // - є масив чисел [10,8,-7,55,987,-1011,0,1050,0] . за допомоги map  перетворити всі об'єкти в масиві на стрінгові.
+// let numbers=[10,8,-7,55,987,-1011,0,1050,0];
+// let string=numbers.map(number=>number+"")
+// console.log(string);
+
+// створити функцію sortNums(array,direction), яка приймає масив чисел, та сортує його від більшого до меншого, або навпаки
+// залежно від значення аргументу direction.
+// let nums = [11,21,3];
+// sortNums(nums,’ascending’) // [3,11,21]
+// sortNums(nums,’descending’) // [21,11,3]
+// sortNums=(array,direction)=>{
+//     if (direction === 'ascending')
+//         return array.sort((a, b) => a - b);
+//     if (direction === 'descending')
+//         return array.sort((a, b) => b - a);
+// }
+// console.log(sortNums([11, 21, 3], 'descending'));
