@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Пари Ім’я = Значення</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+    }
+
+    input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      font-size: 16px;
+    }
+
+    button {
+      padding: 10px 15px;
+      margin: 5px 5px 10px 0;
+      font-size: 14px;
+      cursor: pointer;
+    }
+
+    select {
+      width: 100%;
+      height: 200px;
+      margin-top: 10px;
+      font-size: 16px;
+    }
+
+    @media (max-width: 600px) {
+      button {
+        width: 100%;
+        margin-bottom: 10px;
+      }
+    }
+  </style>
+</head>
+<body>
+<div class="container">
+  <h2>Введіть пару у форматі "name = value"</h2>
+  <input type="text" id="inputField" placeholder="наприклад: username = john123">
+
+  <div>
+    <button onclick="addPair()">Додати</button>
+    <button onclick="sortByName()">Сортувати за ім’ям</button>
+    <button onclick="sortByValue()">Сортувати за значенням</button>
+    <button onclick="deleteSelected()">Видалити вибрані</button>
+  </div>
+
+  <select id="pairList" multiple></select>
+</div>
+
+<script>
+  let pairs = [];
+
+  function isValidPair(input) {
+    const regex = /^\s*([a-zA-Z0-9]+)\s*=\s*([a-zA-Z0-9]+)\s*$/;
+    return regex.test(input);
+  }
+
+  function parsePair(input) {
+    const [name, value] = input.split('=').map(s => s.trim());
+    return { name, value };
+  }
+
+  function updateList() {
+    const list = document.getElementById('pairList');
+    list.innerHTML = '';
+    pairs.forEach((pair, index) => {
+      const option = document.createElement('option');
+      option.text = `${pair.name} = ${pair.value}`;
+      option.value = index;
+      list.add(option);
+    });
+  }
+
+  function addPair() {
+    const input = document.getElementById('inputField').value;
+    if (isValidPair(input)) {
+      const pair = parsePair(input);
+      pairs.push(pair);
+      updateList();
+      document.getElementById('inputField').value = '';
+    } else {
+      alert("Неправильний формат. Використовуйте: name = value (лише латинські букви і цифри).");
+    }
+  }
+
+  function sortByName() {
+    pairs.sort((a, b) => a.name.localeCompare(b.name));
+    updateList();
+  }
+
+  function sortByValue() {
+    pairs.sort((a, b) => a.value.localeCompare(b.value));
+    updateList();
+  }
+
+  function deleteSelected() {
+    const list = document.getElementById('pairList');
+    const selectedIndices = Array.from(list.selectedOptions).map(option => parseInt(option.value));
+    pairs = pairs.filter((_, index) => !selectedIndices.includes(index));
+    updateList();
+  }
+</script>
+</body>
+</html>
