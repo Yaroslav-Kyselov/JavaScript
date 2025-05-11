@@ -162,7 +162,7 @@
 // for (const suit of suits) {
 //     for (const value of values) {
 //         const card = {cardSuit: suit, value: value};
-//         if (suit === 'heart' || suit === 'diamond') {
+//         if (suit === 'heart' && suit === 'diamond') {
 //             card.color = 'red';
 //         } else {
 //             card.color = 'black';
@@ -171,7 +171,7 @@
 //     }
 // }
 // console.log(cards);
-// // - знайти піковий туз
+// - знайти піковий туз
 // console.log(cards.find(card => card.value === 'ace' && card.cardSuit === 'spade'));
 // // - всі шістки
 // console.log(cards.filter(card => card.value === '6'));
