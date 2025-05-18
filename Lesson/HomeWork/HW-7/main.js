@@ -204,3 +204,45 @@
 // car.changeYear(2020);
 // car.addDriver({});
 // console.log(car);
+
+// -створити класс/функцію конструктор попелюшка з полями ім'я, вік, розмір ноги. Створити масив з 10 попелюшок.
+// Сторити об'єкт класу "принц" за допомоги класу який має поля ім'я, вік, туфелька яку він знайшов.
+//     За допомоги циклу знайти яка попелюшка повинна бути з принцом.
+//     Додатково, знайти необхідну попелюшку за допомоги функції масиву find та відповідного колбеку
+//
+// class Cinderella {
+//     constructor(name, age, footSize) {
+//         this.name = name;
+//         this.age = age;
+//         this.footSize = footSize;
+//     }
+// }
+// class Prince {
+//     constructor(name, age, slipper) {
+//         this.name = name;
+//         this.age = age;
+//         this.slipper = slipper;
+//     }
+// }
+// const cinderellas = [
+//     new Cinderella('Masha', 25, 37),
+//     new Cinderella('Dasha', 26, 35),
+//     new Cinderella('Olya', 27, 36),
+//     new Cinderella('Inna', 55, 40),
+//     new Cinderella('Katya', 30, 38),
+//     new Cinderella('Yulya', 35, 39),
+// ];
+//
+// const prince = new Prince('Angelika', 183, 40);
+//
+//
+// for (const cinderella of cinderellas) {
+//     if (cinderella.footSize === prince.slipper) {
+//         prince.wife = cinderella;
+//     }
+// }
+// console.log(prince.wife);
+
+// const cinderellaMain = cinderellas.find(cinderella => cinderella.footSize === prince.slipper);
+// prince.wife = cinderellaMain;
+// console.log(cinderellaMain);
