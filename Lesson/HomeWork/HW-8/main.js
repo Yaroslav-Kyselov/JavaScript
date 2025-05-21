@@ -48,50 +48,26 @@
 //
 // }
 //
-// const clone = cloner({id: 123, name: 'asdsad', greeting() {console.log('hello')}, foo() {console.log('bar')}});
+// const clone = cloner({id: 123, name: 'XXXXX', greeting() {console.log('hello')}, foo() {console.log('bar')}});
 // clone.foo();
-function cloner(obj) {
-    if (obj === null || typeof obj !== 'object') {
-        throw new Error('Invalid object!');
-    }
 
-    function deepClone(source) {
-        if (typeof source !== 'object' || source === null) {
-            return source; // Примітив або null
-        }
-
-        const target = Array.isArray(source) ? [] : {};
-
-        for (const key in source) {
-            const value = source[key];
-
-            if (typeof value === 'function') {
-                target[key] = value; // Копіюємо функцію без bind
-            } else if (typeof value === 'object') {
-                target[key] = deepClone(value); // Рекурсивний виклик
-            } else {
-                target[key] = value;
-            }
-        }
-
-        return target;
-    }
-
-    const result = deepClone(obj);
-    console.log(result);
-    return result;
-}
-const original = {
-    id: 1,
-    name: 'Test',
-    greet() { console.log('Hi, ' + this.name); },
-    nested: {
-        value: 42,
-        say() { console.log('Nested function'); }
-    }
-};
-
-const cloned = cloner(original);
-cloned.greet();           // Hi, Test
-cloned.nested.say();      // Nested function
-console.log(cloned);      // Все скопійовано
+// function cloner(obj) {
+//     if (!obj || typeof obj !== 'object') {
+//         throw new Error('Очікую об"єкт!');
+//     }
+//     const functionMap = {};
+//     for (const key in obj) {
+//         if (typeof obj[key] === 'function') {
+//             functionMap[key] = obj[key].bind({});
+//         }
+//     }
+//     const jsonClone = JSON.parse(JSON.stringify(obj));
+//     for (const key in functionMap) {
+//         jsonClone[key] = functionMap[key];
+//     }
+//     console.log(jsonClone);
+//     return jsonClone;
+// }
+//
+// const clone = cloner({id: 123, name: 'XXXXX', greeting() {console.log('hello')}, foo() {console.log('bar')}});
+// clone.foo();
