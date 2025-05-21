@@ -38,14 +38,10 @@
 //         for (const func of functions) {
 //             cloneObj[func.key] = func.functionClone;
 //         }
-//
 //         console.log(cloneObj);
 //         return cloneObj
-//
 //     }
-//
 //     throw new Error('!!!!!');
-//
 // }
 //
 // const clone = cloner({id: 123, name: 'XXXXX', greeting() {console.log('hello')}, foo() {console.log('bar')}});
@@ -70,4 +66,3 @@
 // }
 //
 // const clone = cloner({id: 123, name: 'XXXXX', greeting() {console.log('hello')}, foo() {console.log('bar')}});
-// clone.foo();
