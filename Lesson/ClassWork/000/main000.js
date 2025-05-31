@@ -39,12 +39,7 @@
 //             –>
 // за допомогою стилів, побудувати сітку по 2 об’єктах в рядок
 //
-// let user =
-//     {id:1, name: 'vasya', age: 31, status: true, skills:[]}
-//
-// for (let fieldName in user) {
-//     console.log(fieldName, user[fieldName]);
-// }
+
 let users = [
     {name: 'vasya', age: 31, status: false},
     {name: 'petya', age: 30, status: true},
@@ -59,9 +54,7 @@ let users = [
     {name: 'max', age: 31, status: true}
 ];
 for (const user of users) {
-
-    for (const fieldName in user) {
-        console.log(fieldName, user[fieldName]);
+    if (user.age>30) {
+        console.log(user);
     }
-    console.log('');
 }
