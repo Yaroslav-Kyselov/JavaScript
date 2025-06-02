@@ -5,7 +5,7 @@
 //     console.log(result);
 //     return result;
 // }
-// square(5,5)
+// // square(5,5)
 // square(22,33)
 
 // створити функцію яка обчислює та повертає площу кола з радіусом r
