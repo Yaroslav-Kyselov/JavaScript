@@ -1,10 +1,80 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="uk">
 <head>
     <meta charset="UTF-8">
-    <title>TEST</title>
+    <title>Courses</title>
+    <style>
+        .course {
+            border: 1px solid #aaa;
+            padding: 10px;
+            margin-bottom: 15px;
+            border-radius: 6px;
+        }
+        .property {
+            margin: 5px 0;
+        }
+    </style>
 </head>
 <body>
-<script src="main000.js"></script>
+<div id="container"></div>
+
+<script>
+    const coursesArray = [
+        {
+            title: 'JavaScript Complex',
+            duration: '5 months',
+            price: 500,
+            modules: ['HTML', 'CSS', 'JavaScript', 'React']
+        },
+        {
+            title: 'QA Manual',
+            duration: '3 months',
+            price: 300,
+            modules: ['Testing Basics', 'Test Cases', 'Bug Reporting']
+        }
+    ];
+
+    const container = document.getElementById('container');
+
+    coursesArray.forEach(course => {
+        const courseDiv = document.createElement('div');
+        courseDiv.classList.add('course');
+
+        // title
+        const titleDiv = document.createElement('div');
+        titleDiv.classList.add('property');
+        titleDiv.innerText = `Title: ${course.title}`;
+        courseDiv.appendChild(titleDiv);
+
+        // duration
+        const durationDiv = document.createElement('div');
+        durationDiv.classList.add('property');
+        durationDiv.innerText = `Duration: ${course.duration}`;
+        courseDiv.appendChild(durationDiv);
+
+        // price
+        const priceDiv = document.createElement('div');
+        priceDiv.classList.add('property');
+        priceDiv.innerText = `Price: $${course.price}`;
+        courseDiv.appendChild(priceDiv);
+
+        // modules
+        const modulesDiv = document.createElement('div');
+        modulesDiv.classList.add('property');
+        modulesDiv.innerText = 'Modules:';
+
+        const list = document.createElement('ul');
+        course.modules.forEach(module => {
+            const li = document.createElement('li');
+            li.innerText = module;
+            list.appendChild(li);
+        });
+
+        modulesDiv.appendChild(list);
+        courseDiv.appendChild(modulesDiv);
+
+        container.appendChild(courseDiv);
+    });
+</script>
 </body>
 </html>

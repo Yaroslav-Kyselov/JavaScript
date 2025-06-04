@@ -14,32 +14,13 @@ let coursesArray = [
         title: 'Java Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'java core',
-            'java advanced']
+        modules: ['html', 'css', 'js', 'mysql','mongodb', 'angular', 'aws', 'docker', 'git', 'java core', 'java advanced']
     },
     {
         title: 'Python Complex',
         monthDuration: 6,
         hourDuration: 909,
-        modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'angular',
-            'aws',
-            'docker',
-            'python core',
-            'python advanced']
+        modules: ['html', 'css', 'js', 'mysql', 'mongodb', 'angular', 'aws', 'docker', 'python core', 'python advanced']
     },
     {
         title: 'QA Complex',
@@ -52,16 +33,7 @@ let coursesArray = [
         monthDuration: 7,
         hourDuration: 909,
         modules: ['html',
-            'css',
-            'js',
-            'mysql',
-            'mongodb',
-            'react',
-            'angular',
-            'aws',
-            'docker',
-            'git',
-            'node.js',
+            'css', 'js', 'mysql', 'mongodb', 'react', 'angular', 'aws', 'docker', 'git', 'node.js',
             'python',
             'java']
     },
@@ -91,18 +63,13 @@ for (const item of coursesArray) {
 
     const Modules=document.createElement('div');
     Modules.classList.add('end');
-
-    for (const module of coursesArray.['3']) {
-        const li = document.createElement('li');
-        li.innerText = item;
-        menu.appendChild(li);
-    }
-
-    // const Ul=document.createElement('Ul');
-    // Ul.classList.add('list');
-    // Ul.innerText=item.module;
-
-    Modules.appendChild(Ul)
+    const menu=document.createElement('ul')
+    for (let i=0; i<item.modules.length; i++) {
+            const li = document.createElement('li');
+            li.innerText = item.modules[i];
+            menu.appendChild(li);
+        }
+    Modules.appendChild(menu)
     Wrap.append(Title, MonthDuration, HourDuration, Modules);
 
     document.body.appendChild(Wrap);
