@@ -92,11 +92,17 @@ for (const item of coursesArray) {
     const Modules=document.createElement('div');
     Modules.classList.add('end');
 
-    const Li=document.createElement('li');
-    Li.classList.add('list');
-    Li.innerText=item.module;
+    for (const module of coursesArray.['3']) {
+        const li = document.createElement('li');
+        li.innerText = item;
+        menu.appendChild(li);
+    }
 
-    Modules.appendChild(Li)
+    // const Ul=document.createElement('Ul');
+    // Ul.classList.add('list');
+    // Ul.innerText=item.module;
+
+    Modules.appendChild(Ul)
     Wrap.append(Title, MonthDuration, HourDuration, Modules);
 
     document.body.appendChild(Wrap);
