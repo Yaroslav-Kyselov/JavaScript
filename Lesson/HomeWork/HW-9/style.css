@@ -1,0 +1,14 @@
+
+.wrap {
+   border: black 1px solid;
+}
+.collapse {
+    width: 150px;
+    height: 250px;
+}
+.alpha{
+    text-decoration-color: black;
+}
+.beta{
+    background:  yellow;
+}
