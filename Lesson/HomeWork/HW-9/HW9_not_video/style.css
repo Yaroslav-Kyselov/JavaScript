@@ -1,0 +1,30 @@
+.wrap{
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    border: red 3px solid;
+    font-size: 40px;
+    gap: 5px;
+}
+.line{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    gap: 5px;
+}
+.top{
+    border: cornflowerblue 3px solid;
+}
+
+.left {
+    width: 40vw;
+    border: cornflowerblue 3px solid;
+}
+
+.right {
+    width: 60vw;
+    border: cornflowerblue 3px solid;
+}
+.end{
+    border: cornflowerblue 3px solid;
+}

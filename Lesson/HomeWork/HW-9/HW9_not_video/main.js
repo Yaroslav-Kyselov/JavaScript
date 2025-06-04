@@ -61,6 +61,10 @@ for (const item of coursesArray) {
     HourDuration.classList.add('right');
     HourDuration.innerHTML=item.hourDuration;
 
+    const Line=document.createElement('div');
+    Line.classList.add('line');
+    Line.append(MonthDuration, HourDuration)
+
     const Modules=document.createElement('div');
     Modules.classList.add('end');
     const menu=document.createElement('ul')
@@ -70,7 +74,7 @@ for (const item of coursesArray) {
             menu.appendChild(li);
         }
     Modules.appendChild(menu)
-    Wrap.append(Title, MonthDuration, HourDuration, Modules);
+    Wrap.append(Title, Line, Modules);
 
     document.body.appendChild(Wrap);
 }
