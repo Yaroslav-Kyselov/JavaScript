@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <title>Pagination Example</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            padding: 20px;
+        }
+
+        .item {
+            padding: 5px;
+            margin-bottom: 5px;
+            border-bottom: 1px solid #ccc;
+        }
+
+        .buttons {
+            margin-top: 15px;
+        }
+
+        button {
+            padding: 10px;
+            margin: 5px;
+        }
+    </style>
+</head>
+<body>
+
+<h2>Список об'єктів</h2>
+<div id="list"></div>
+
+<div class="buttons">
+    <button onclick="prevPage()">Prev</button>
+    <button onclick="nextPage()">Next</button>
+</div>
+
+<script>
+    // 1. Створення масиву з 100 об'єктів
+    const data = [];
+    for (let i = 1; i <= 100; i++) {
+        data.push({ id: i, name: `Об'єкт №${i}` });
+    }
+
+    let currentPage = 1;
+    const itemsPerPage = 10;
+
+    function displayPage(page) {
+        const start = (page - 1) * itemsPerPage;
+        const end = start + itemsPerPage;
+        const visibleItems = data.slice(start, end);
+
+        const listDiv = document.getElementById('list');
+        listDiv.innerHTML = '';
+
+        visibleItems.forEach(item => {
+            const div = document.createElement('div');
+            div.className = 'item';
+            div.innerText = `ID: ${item.id}, Name: ${item.name}`;
+            listDiv.appendChild(div);
+        });
+    }
+
+    function nextPage() {
+        if (currentPage < data.length / itemsPerPage) {
+            currentPage++;
+            displayPage(currentPage);
+        }
+    }
+
+    function prevPage() {
+        if (currentPage > 1) {
+            currentPage--;
+            displayPage(currentPage);
+        }
+    }
+
+    // При завантаженні сторінки
+    displayPage(currentPage);
+</script>
+
+</body>
+</html>
