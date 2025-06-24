@@ -31,5 +31,5 @@ fetch('https://dummyjson.com/recipes')
 
             div.append(divWithInfo, ol, img);
             recipesDiv.appendChild(div);
-        };
+        }
     });
