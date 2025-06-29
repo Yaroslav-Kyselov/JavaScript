@@ -4,16 +4,14 @@ let pairs = [];
 
 function addPair() {
     const raw = input.value.trim();
-    const match = raw.match(/^([a-zA-Z0-9]+)\s*=\s*([a-zA-Z0-9]+)$/);
-
+    const match = raw.match(/^([\p{L}\d]+)\s*=\s*([\p{L}\d]+)$/u);
     if (!match) {
-        alert("Неправильний формат. Введіть у форматі Ім'я = Значення");
+        alert("Invalid format. Use Name=Value.");
         return;
     }
 
     const name = match[1];
     const value = match[2];
-
     pairs.push({ name, value });
     input.value = "";
     renderList();
@@ -40,7 +38,7 @@ function renderList() {
     for (const pair of pairs) {
         const option = document.createElement("option");
         option.value = `${pair.name}=${pair.value}`;
-        option.textContent = `${pair.name} = ${pair.value}`;
+        option.textContent = `${pair.name}=${pair.value}`;
         list.appendChild(option);
     }
 }
