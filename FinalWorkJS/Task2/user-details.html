@@ -1,33 +1,14 @@
 <!DOCTYPE html>
 <html lang="uk">
 <head>
-    <meta charset="UTF-8">
-    <title>Деталі користувача</title>
+  <meta charset="UTF-8" />
+  <title>User Details</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-<h1>Інформація про користувача</h1>
-<div id="user-details"></div>
-
-<script>
-    const params = new URLSearchParams(window.location.search);
-    const userId = params.get('id');
-
-    fetch(`https://jsonplaceholder.typicode.com/users/${userId}`)
-        .then(response => response.json())
-        .then(user => {
-            const container = document.getElementById('user-details');
-            container.innerHTML = `
-          <p><strong>ID:</strong> ${user.id}</p>
-          <p><strong>Ім’я:</strong> ${user.name}</p>
-          <p><strong>Username:</strong> ${user.username}</p>
-          <p><strong>Email:</strong> ${user.email}</p>
-          <p><strong>Телефон:</strong> ${user.phone}</p>
-          <p><strong>Вебсайт:</strong> ${user.website}</p>
-          <p><strong>Адреса:</strong> ${user.address.city}, ${user.address.street}, ${user.address.suite}</p>
-          <p><strong>Компанія:</strong> ${user.company.name}</p>
-        `;
-        })
-        .catch(error => console.error('Помилка:', error));
-</script>
+  <div id="user-info" class="user-block"></div>
+  <button id="load-posts" class="wide-btn">Posts of current user</button>
+  <div id="posts-container" class="grid-posts"></div>
+  <script src="js/user-details.js"></script>
 </body>
 </html>
