@@ -38,3 +38,6 @@ a {
   margin-top: 10px;
   color: blue;
 }
+#post-info{
+  overflow: hidden;
+}
